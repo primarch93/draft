@@ -10,9 +10,9 @@ class App extends React.Component {
   ],
   };
   
-  handleSomething = () => {
-    console.log('App.jsx setState update')
-  }
+ removePost = (id) => {
+this.setState({ posts: this.state.posts.filter(post => post.id !== id)})
+}
 
 
 
@@ -21,7 +21,7 @@ const{posts} = this.state;
 
     return (
     <div className="App">
-  <Posts posts={posts} cb= {this.handleSomething}/>
+  <Posts posts={posts} removePost={this.removePost}/>
     </div>
     );
     }

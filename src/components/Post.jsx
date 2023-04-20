@@ -1,5 +1,7 @@
-export function Post (props) {
-const{name, cb} = props;
+import React from "react";
 
-    return <h2 onClick={cb}>{name}</h2>
+export function Post (props) {
+const{id, name, removePost} = props;
+
+    return <h2>{name} <button onClick={() => removePost(id)}>delete</button></h2>
 }
