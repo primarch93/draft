@@ -1,12 +1,12 @@
-import {Form} from './components/Form' ;
+import React from "react";
+import { SubscriptionForm } from "./components/SubscriptionForm";
 
 function App() {
-    return (
+  return (
     <div className="App">
-  <Form />
+      <SubscriptionForm />
     </div>
-    );
+  );
 }
-  
 
 export default App;
